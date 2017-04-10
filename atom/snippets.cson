@@ -1,0 +1,119 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.text.html, .text.php':
+  'kitten':
+    'prefix': 'kitten'
+    'body': '<img src=\"https://placekitten.com/${1:300}/${2:200}\" alt=\"${3:Placeholder Image}\">$0'
+  'place':
+    'prefix': 'place'
+    'body': '<img src=\"https://placeimg.com/${1:300}/${2:200}/${3:any}\" alt=\"${4:Placeholder Image}\">$0'
+  'placedog':
+    'prefix': 'placedog'
+    'body': '<img src=\"https://placedog.com/${1:300}/${2:200}\" alt=\"${3:Placeholder Image}\">$0'
+  'WP loop':
+    'prefix': 'the loop'
+    'body': 'while ( have_posts() ) : the_post();\n\t\nendwhile; // End of the loop.'
+  'translatable text':
+    'prefix': 'esc_html_e'
+    'body': '<?php esc_html_e( \'${1:text}\', \'${2:domain}\' ); ?>${3}'
+  'svg sprite':
+    'prefix': 'svg sprite'
+    'body': '<svg class="svg-sprite" role="img"><use xlink:href="#shape-placeholder"></use></svg>'
+  'wp img':
+    'prefix': 'wpimg'
+    'body': '<img src="<?php bloginfo( \'stylesheet_directory\' ) ?>/assets/images/${1}" alt="${2}">'
+
+'.source.css.scss':
+  '@import':
+    'prefix': 'import'
+    'body': '@import \'${1:path}\';'
+  'layout susy':
+    'prefix': 'layout'
+    'body': '@include with-layout( \$${1:grid-small} ) {\n\t\n}$0'
+  'susy-span':
+    'prefix': 'susy-span'
+    'body': '@include span( ${1:1} of ${2:12} );$0'
+  'susy-push':
+    'prefix': 'susy-push'
+    'body': '@include push( ${1:1} of ${2:12} );$0'
+  'breakpoint':
+    'prefix': 'bp'
+    'body': """
+      @include breakpoint( \$${1:var-name} ) {
+      \t
+      } // \$${1:var-name}$0
+    """
+  'Em-Calc':
+    'prefix': 'ec'
+    'body': 'em-calc( $1 )$2'
+  'Rem-Calc':
+    'prefix': 'rc'
+    'body': 'rem-calc( $1 )$2'
+  'Font size rem':
+    'prefix': 'fz'
+    'body': 'font-size: rem-calc( $1 );$2'
+  'Light text':
+    'prefix': 'light'
+    'body': 'font-weight: $f-light;'
+  'Regular text':
+    'prefix': 'regular'
+    'body': 'font-weight: $f-regular;'
+  'Medium text':
+    'prefix': 'medium'
+    'body': 'font-weight: $f-medium;'
+  'Bold text':
+    'prefix': 'bold'
+    'body': 'font-weight: $f-bold;'
+  'Heavy text':
+    'prefix': 'heavy'
+    'body': 'font-weight: $f-heavy'
+  'Clearfix':
+    'prefix': 'clearfix'
+    'body': '@extend %clearfix;'
+  'Transition':
+    'prefix': 'transition'
+    'body': '@extend %transition;'
+  'Unstyled link':
+    'prefix': 'unstyled link'
+    'body': '@extend %unstyled-link;'
+  'Unstyled list':
+    'prefix': 'unstyled list'
+    'body': '@extend %unstyled-list;'
+  'Width span':
+    'prefix': 'wspan'
+    'body': 'width: span( ${1:1} of ${2:12} );$0'
+  'Padding-right gutter':
+    'prefix': 'prgutter'
+    'body': 'padding-right: gutter( ${1:12} );$0'
+  'Padding-left gutter':
+    'prefix': 'plgutter'
+    'body': 'padding-left: gutter( ${1:12} );$0'
+  'Margin-right gutter':
+    'prefix': 'mrgutter'
+    'body': 'margin-right: gutter( ${1:12} );$0'
+  'Margin-left gutter':
+    'prefix': 'mlgutter'
+    'body': 'margin-left: gutter( ${1:12} );$0'
+  'Display Flex':
+    'prefix': 'flex'
+    'body': 'display: flex;'
